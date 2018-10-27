@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/gsproduct.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目优惠券 -->
+    <div class="container">
+        <div class="row">
+            <!-- 慢慢买头部 -->
+            <div class="mmm_header">
+                <a href="index.html" class="mmm_back">
+                    <img src="" alt="">&lt;
+                </a>
+                <h3>凑单品</h3>
+                <a href="javascript:;" class="mmm_app">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+            <!-- 导航栏切换 -->
+            <div class="tab_nav">
+                <div class="title_nav">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="javascript:;" class="jd">
+                                <span>京东</span>
+                                <i>^</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="hb">
+                                <span>华北</span>
+                                <i>^</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="all">
+                                <span>全部地区</span>
+                                <i>^</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search"></div>
+                <div class="content_first" style="display:none">
+                    <ul class="shop">
+                        <!-- 店铺的坑 -->
+                    </ul>
+                </div>
+                <div class="content_two" style="display:none">
+                    <ul class="area">
+                        <!-- 区域的坑 -->
+                    </ul>
+                </div>
+                <div class="content_three" style="display:none">
+                    <ul class="allPrice">
+                        <li>
+                            <a href="#"  class="clearfix sn"><span>全部价格</span><span style="display:none" class="right">√</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 主体内容渲染 -->
+            <div class="mmm_main">
+                <ul class="clearfix info">
+                  
+                </ul>
+            </div>
+            <!--底部 -->
+            <div class="mmm_footer">
+                <div class="footre_nav">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="javascript:;">登录</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">注册</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                                <span>返回顶部</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_content">
+                    <span class="mobile">手机App下载</span>
+                    <span> 慢慢买手机版 -- 掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体内容渲染 -->
+    <script type="text/html" id="mainTmp">
+        {{each result v i}} 
+            <li>
+                <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+                   <img src="{{v.productImg}}" alt="">
+                    <p>
+                        {{v.productName}}</p>
+                    <div class="clearfix"><span class="pricee">{{v.productPrice}}</span><span class="gopage">去凑单</span></div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <!-- 地域的模板 -->
+    <script type="text/html" id="areaTmp">
+        {{each result v i}} 
+            <li data-id="{{v.areaId}}"><a href="#"  class="clearfix sn"><span>{{v.areaName}}</span><span style="display:none" class="right">√</span></a></li>
+        {{/each}}
+    </script>
+    <!-- 店铺模板 -->
+    <script type="text/html" id="shopTmp">
+        {{each result v i}} 
+            <li data-id="{{v.shopId}}"><a href="#" class="clearfix sn"><span>{{v.shopName}}</span><span style="display:none" class="right">√</span></a></li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
+    <script src="./js/gsproduct.js"></script>
+</body>
+
+
+</html>

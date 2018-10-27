@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/productlist.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目 -->
+    <div class="container">
+        <!-- 慢慢买头部 -->
+        <div class="row">
+            <div class="mmm_header">
+                <div class="mmm_logo">
+                    <a href="index.html">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                </div>
+                <div class="mmm_app">
+                    <a href="javascript:;">
+                        <img src="./images/header_app.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- 慢慢买搜索 -->
+            <div class="mmm_search">
+                <div class="clearfix">
+                    <input class="search_input" type="text" placeholder="请输入你想比价的商品">
+                    <input class="search_button" type="button" value="搜索">
+                </div>
+            </div>
+            <!-- 面包屑导航 -->
+            <div class="mmm_nav clearfix">
+                <div class="menu_nav">
+                    <a href="index.html">首页</a>
+                    >
+                    <a href="category.html">全部分类</a>
+                    >
+                    <a href="" class="text"></a>
+                    >
+                </div>
+                <div class="btn_nav">
+                    <a href="">筛选</a>
+                </div>
+            </div>
+            <!-- 慢慢买产品列表页-->
+            <div class="product_list">
+                <ul class="product">
+                    <!-- 挖个产品列表坑 -->
+                </ul>
+            </div>
+            <!-- 列表分页 -->
+            <div class="mmm_page">
+                <ul class="clearfix">
+                    <li>
+                        <a href="javascript:;" class="prev">上一页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="pagenum">
+                                <select name="" id="pageing">
+                                   <!-- 分页的坑 -->
+                                </select>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="next">下一页</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmm_footer">
+                <div class="footre_nav">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">登录</a>
+                        </li>
+                        <li>
+                            <a href="#">注册</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                                <span>返回顶部</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_content">
+                    <span class="mobile">手机App下载</span>
+                    <span> 慢慢买手机版 -- 掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 慢慢买列表页渲染 -->
+    <script type="text/html" id="productlistTmp">
+        {{each result v i}}
+           <li>
+                <a href="productlist_detailed.html?productId={{v.productId}}" class="clearfix">
+                    <div class="product-pic">
+                        {{@v.productImg}}
+                    </div>
+                    <div class="product_des">
+                        <div class="product_des_title">
+                            <span>{{v.productName}}</span>
+                        </div>
+                        <div class="product_des_content">
+                            <span class="price">{{v.productPrice}}</span>
+                            <div class="bottom">
+                                <span>{{v.productQuote}}</span>
+                                <span class="comment">{{v.productCom}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <!-- 慢慢买分页渲染 -->
+    <script type="text/html" id = "pagTmp">
+        {{each arr v i}}
+            <option value="{{v}}">{{v}}/{{arr.length}}</option>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/productlist.js"></script>
+</body>
+
+</html>

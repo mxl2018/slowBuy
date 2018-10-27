@@ -1,0 +1,45 @@
+.mmm_header {
+  width: 100%;
+  height: 0.44rem;
+  line-height: 0.4rem;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  color: white;
+  background-color: #FF841D;
+}
+.mmm_header a {
+  width: 0.5rem;
+  height: 0.44rem;
+  position: absolute;
+  top: 0;
+}
+.mmm_header .icon-back {
+  left: 0;
+}
+.mmm_header .mmm_app {
+  right: 0;
+}
+.main_nav {
+  width: 3rem;
+  height: 6.72rem;
+  margin: 0 auto;
+  margin-top: 0.1rem;
+  margin-bottom: 0.3rem;
+}
+.main_nav a {
+  height: 0.43rem;
+  margin: 0 0 0.05rem 0.05rem;
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #F4F4F4;
+  padding: 0.1rem 0.08rem;
+}
+.main_nav a img {
+  width: 0.16rem;
+  height: 0.16rem;
+  display: inline;
+  vertical-align: middle;
+  margin-right: 0.05rem;
+}

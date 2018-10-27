@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/category.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目 -->
+    <div class="container">
+        <!-- 慢慢买头部 -->
+        <div class="mmm_header">
+            <div class="mmm_logo">
+                <a href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="mmm_app">
+                <a href="javascript:;">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 慢慢买搜索 -->
+        <div class="mmm_search">
+            <div class="clearfix">
+                <input class="search_input" type="text" placeholder="请输入你想比价的商品">
+                <input class="search_button" type="button" value="搜索">
+            </div>
+        </div>
+        <!-- 慢慢买导航-->
+        <div class="mmm_nav">
+            <div class="erp">
+                <ul class="first">
+                    <!-- 一级分类的坑 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="mmm_footer">
+            <div class="footre_nav">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">登录</a>
+                    </li>
+                    <li>
+                        <a href="#">注册</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                            <span>返回顶部</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <span class="mobile">手机App下载</span>
+                <span> 慢慢买手机版 -- 掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <!-- 二级分类模板渲染 -->
+    <script type="text/html" id="secondTmp">
+        {{each result v i}}
+            <li><a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">{{v.category}}</a></li>
+        {{/each}}
+    </script>
+    <!-- 一级分类模板渲染 -->
+    <script type="text/html" id="topTmp">
+        {{each result v i}}
+            <li class="top">
+                <a href="javascript:;" data-id={{v.titleId}}  class="bac-pic">{{v.title}}</a>
+                <ul class="second clearfix">
+                        <!-- 二级分类的坑 -->
+                </ul>
+            </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+<!-- <img src="{{./images/ic_search.png}}" alt=""> -->
+<!-- <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
+                            alt=""> -->
+</html>

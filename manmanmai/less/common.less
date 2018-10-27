@@ -1,0 +1,217 @@
+@import 'base';
+@import 'normalize';
+@import 'variable';
+// <!-- 慢慢买项目 -->
+.container{
+    width:100%;
+    // height:20rem;
+    max-width: 750px;
+    min-width: 320px;
+    background-color: #fff;
+    margin:0 auto;
+}
+// 慢慢买头部
+.mmm_header{
+    width:100%;
+    height:0.5rem;
+    background-color:@mmmColor;
+    position: relative;
+    padding-left:2.12rem;
+    padding-right:0.34rem;
+}
+.mmm_header .mmm_logo{
+    width:2.12rem;
+    height:100%;
+    // background-color: red;
+}
+.mmm_header .mmm_logo img{
+    width:1.85rem;
+    height:0.25rem;
+    position: absolute;
+    left:20px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.mmm_header .mmm_app{
+    width:0.34rem;
+    height:100%;
+    // background-color: green;
+}
+.mmm_header .mmm_app img{
+    width:0.34rem;
+    height:0.34rem;
+    vertical-align: middle;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+}
+// <!-- 慢慢买搜索 -->
+.mmm_search{
+    width:100%;
+    height:0.5rem;
+    background-color: #fff;
+    // padding-top:0.1rem;
+    // padding-left:0.1rem;
+    padding:0.1rem 0.1rem 0;
+    // margin-bottom: 15px;
+}
+.mmm_search .search_input{
+    width:70%;
+    height:0.3rem;
+    line-height: 0.3rem;
+    border-radius:30px;
+    float:left;
+    background-color: #f1f1f1;
+    padding-left:20px;
+}
+.mmm_search .search_button{
+    width:0.63rem;
+    height:0.3rem;
+    float:right;
+    border-radius:30px;
+    color:white;
+    background-color:@mmmColor;
+}
+// 底部导航
+.mmm_footer{
+    width:100%;
+    // margin-top:0.3rem;
+    background-color: #EFEFEF;
+}
+.mmm_footer .footre_nav li{
+    float:left;
+    width:33.3%;
+    height:0.34rem;
+    line-height: 0.34rem;
+    text-align: center;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.mmm_footer .footre_nav li:last-child{
+    border-right:none;
+}
+.mmm_footer .footre_nav li .img{
+    width:0.1rem;
+    height:0.1rem;
+    display: inline-block;
+}
+.footer_content{
+    text-align: center;
+}
+.footer_content .mobile{
+    color:red;
+}
+// 产品列表页和产品详情页公共类
+.mmm_nav{
+    width:100%;
+    // height:0.38rem;
+    line-height: 0.38rem;
+    padding:0 0.1rem;
+    background-color: #F5F5F5;
+    position: relative;
+}
+.mmm_nav .menu_nav{
+    float:left;
+}
+.mmm_nav .btn_nav{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:0.1rem;
+    box-shadow: 0 1px 2px #888;
+}
+.mmm_nav .btn_nav a{
+    display:block;
+    width:0.6rem;
+    height:0.28rem;
+    line-height: 0.28rem;
+    text-align: center;
+}
+// 首页和列表详情页的公共类
+.mmm_product .info_more{
+    border:none;
+    text-align: center;
+    padding:0.1rem  0.1rem 0;
+}
+.mmm_product .info_more a{
+    width:100%;
+    display: block;
+    height:0.3rem;
+    border:1px solid #ccc;
+    line-height: 0.3rem;
+    border-radius:10px;
+    background-color: #f9f9f9;
+}
+// 首页和省钱控页面的公共类
+.mmm_product{
+    width:100%;
+    // height:1.3rem;
+    background-color: #fff;
+    margin:0 auto;
+}
+.mmm_product ul{
+    background-color: #fff;
+}
+.mmm_product ul li{
+    border-bottom:1px solid #ccc;
+    padding:0.2rem 0.1rem;
+}
+.mmm_product ul li .product-pic{
+    float:left;
+}
+.mmm_product ul li .product-pic img{
+    width:1rem;
+    height:1rem;
+}
+.mmm_product ul li .product_des{
+    // float:left;
+    overflow: hidden;
+}
+.mmm_product .product_des .product_des_title{
+    margin-bottom:0.5rem;
+}
+.mmm_product .product_des .product_des_title span{
+    color:red;
+}
+.product_des_content .time{
+    float:left;
+}
+.product_des_content .num{
+    float:right;
+}
+
+// 慢慢买分页标签页
+.mmm_page{
+    width:100%;
+    height:0.36rem;
+    padding-top:0.02rem;
+}
+.mmm_page li {
+    float:left;
+    width:33.3%;
+    text-align: center
+}
+.mmm_page li a{
+    display: block;
+    width:0.82rem;
+    height:0.33rem;
+    background-color: #d4d4d4;
+    line-height: 0.33rem;
+    margin:0 auto;
+    border:1px solid #ccc;
+    border-radius:0.05rem;
+}
+.mmm_page li:nth-last-child(2) a {
+    border:none;
+    background-color: #fff;
+}
+.mmm_page li:nth-last-child(2) a select{
+    width:0.82rem;
+    height:0.33rem;
+    padding-left:0.15rem;
+}
+.mmm_page li:nth-last-child(2) a select option{
+    text-align: center;
+}

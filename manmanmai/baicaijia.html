@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/baicaijia.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目 -->
+    <div class="container">
+        <div class="row">
+            <!-- 慢慢买头部 -->
+            <div class="mmm_header">
+                <a href="index.html" class="mmm_back">
+                    <img src="" alt="">&lt;
+                </a>
+                <h3>白菜价-淘宝内部券</h3>
+                <a href="javascript:;" class="mmm_app">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+            <!-- 慢慢买导航切换 -->
+
+            <div class="tab_nav">
+                <div class="list_nav" id="wrapper">
+                    <ul class="clearfix nav-title" >
+                        <!-- 挖个标题的坑 -->
+                    </ul>
+                </div>
+                <div class="search"></div>
+            </div>
+            <!-- 主体内容 -->
+            <div class="nav-content">
+                <ul class="content">
+                    <!-- 主体内容挖个坑 -->
+                </ul>
+            </div>
+            <!--底部 -->
+            <div class="mmm_footer">
+                <div class="footre_nav">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="javascript:;">登录</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">注册</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                                <span>返回顶部</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_content">
+                    <span class="mobile">手机App下载</span>
+                    <span> 慢慢买手机版 -- 掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容模板 -->
+    <script type="text/html" id="contentTmp">
+        {{each result v i }}
+        <li>
+                <a biz-itemid="538754112089" class="gobuy box-info" isconvert="1" href="http://s.click.taobao.com/lkqGHQx" target="_blank">
+                    <a href="" class="box-info">
+                    {{@v.productImg}}
+                    <div class="right">
+                        <p class="numTitle">{{@v.productName}}</p>
+                        <div>
+                            {{@v.productPrice}}
+                        </div>
+                            {{@v.productCouponRemain}}
+                        <div class="cheap clearfix">
+                            {{@v.productCoupon}}
+                            <!-- <a href="" class="moneyPage">点击领15元优惠券</a> -->
+                            {{@v.productHref}}
+                            <!-- <a href="" class="link">下单连接</a> -->
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="titleTmp">
+        {{each result v i }}
+            <li>
+                <a data-id="{{v.titleId}}" href="#">{{v.title}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
+    <script src="./js/baicaijia.js"></script>
+</body>
+
+
+</html>

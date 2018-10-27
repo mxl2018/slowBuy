@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/moneyproduct.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目 -->
+    <div class="container">
+        <!-- 慢慢买头部 -->
+        <div class="mmm_header">
+            <a href="index.html" class="icon-back">></a>
+            <h3 class="title">国内折扣</h3>
+            <a href="javascript:;" class="mmm_app">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+        <!-- 详情页 -->
+        <div class="money_detail">
+          <!-- 挖个详情页的坑 -->
+        </div>
+        <!-- 大图片 -->
+        <div class="city">
+                <!-- 大图片挖个坑 -->
+        </div>
+        <!-- 前往购买 -->
+        <div class="gobuy">
+            <a href="#">前往购买</a>
+        </div>
+        <!-- 二维码 -->
+        <div class="error_code">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+        <div class="contentbox">
+            <!--评论区挖个坑 -->
+        </div>
+        <!--底部 -->
+        <div class="mmm_footer">
+            <div class="footre_nav">
+                <ul class="clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                            <span>返回顶部</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <span class="mobile">手机App下载</span>
+                <span> 慢慢买手机版 -- 掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="commenttmp"> 
+        {{each result v i }}
+            {{@v.productComment}}
+        {{/each}}
+    </script>
+    <!-- 大图片 模板 -->
+    <script type="text/html" id="listtmp">
+        {{each result v i }}
+            {{@v.productCity}}
+        {{/each}}
+    </script>
+      <!-- 详情页模板-->
+    <script type="text/html" id="titleTmp">
+        {{each result v i }}
+            <h3 class="money_title">{{v.productName}}</h3>
+            <div class="money_from">
+                <span>{{v.productFrom}}</span>
+                <span>{{v.productTime}}</span>
+                <span>{{v.productTips}}</span>
+            </div>
+            <div class="money_info clearfix">
+                <div class="left">
+                    <p class="money_info_text">{{v.productInfo}}</p>
+                    <p>{{v.productInfo1}}</p>
+                </div>
+                <a href="#" class="money_info_img">{{@v.productImgSm}}</a>
+            </div>
+            <div class="big_pic">
+                {{@v.productImgLg}}
+            </div>
+        {{/each}}
+            <!-- <img  src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt=""> -->
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/moneyproduct.js"></script>
+    <!-- <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt=""> -->
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+.mmm_header {
+  width: 100%;
+  height: 0.44rem;
+  line-height: 0.4rem;
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  color: white;
+  background-color: #FF841D;
+}
+.mmm_header a {
+  width: 0.5rem;
+  height: 0.44rem;
+  position: absolute;
+  top: 0;
+}
+.mmm_header .icon-back {
+  left: 0;
+}
+.mmm_header .mmm_app {
+  right: 0;
+}
+.money_detail {
+  text-align: left;
+  padding: 0 0.1rem;
+}
+.money_detail .money_title {
+  font-size: 0.18rem;
+  padding: 0.1rem 0;
+}
+.money_detail .money_from {
+  color: #ccc;
+  padding: 0.05rem 0 ;
+}
+.money_detail .money_info {
+  padding: 0.05rem  3rem 0 0;
+  position: relative;
+}
+.money_detail .money_info .money_info_text {
+  padding: 0.05rem 0 0.05rem 0;
+}
+.money_detail .money_info .money_info_img {
+  width: 0.6rem;
+  height: 0.6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.money_detail .big_pic {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: 0.3rem;
+}
+.city {
+  width: 1.3rem;
+  margin: 0 auto;
+  padding: 0 0.1rem 0.1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 0.1rem;
+  box-shadow: 0.05rem 0.05rem 0.1rem  #ccc;
+}
+.city li {
+  height: 0.21rem;
+  line-height: 0.21rem;
+  border-bottom: 1px dashed #ccc;
+  padding: 0 0.05rem;
+}
+.city li span {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.city li span strong {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: orange;
+  padding-left: 0.2rem;
+}
+.city li:hover {
+  background-color: #ccc;
+}
+.gobuy {
+  padding: 0.1rem;
+}
+.gobuy a {
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  border-radius: 0.05rem;
+  background-color: orange;
+  text-align: center;
+  color: white;
+}
+.error_code {
+  margin-bottom: 0.1rem;
+}
+.contentbox {
+  padding: 0.1rem;
+}
+.contentbox .form {
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+  width: 100%;
+  height: 1.16rem;
+  border: 1px solid #ccc;
+  position: relative;
+  margin-bottom: 0.1rem;
+}
+.contentbox .form .ctrl {
+  width: 100%;
+  height: 0.35rem;
+  background-color: #ccc;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+.contentbox .form .ctrl .tjdp {
+  width: 1rem;
+  height: 0.36rem;
+  line-height: 0.39rem;
+  text-align: center;
+  background-color: orange;
+}
+.contentbox .list {
+  padding: 0.1rem;
+  position: relative;
+  margin-top: 0.1rem;
+}
+.contentbox .list li {
+  width: 100%;
+  height: 0.8rem;
+  position: relative;
+}
+.contentbox .list li .userimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contentbox .list li .userimg img {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+}
+.contentbox .list .con {
+  padding-left: 0.5rem;
+}
+.contentbox .list .con .username {
+  float: left;
+}
+.contentbox .list .con .time {
+  float: right;
+}
+.contentbox .list .con .content img {
+  width: 0.22rem;
+  height: 0.22rem;
+}

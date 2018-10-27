@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/brandTitle.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目 -->
+    <div class="container">
+        <!-- 慢慢买头部 -->
+        <div class="mmm_header">
+            <div class="mmm_logo">
+                <a href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="mmm_app">
+                <a href="javascript:;">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 慢慢买搜索 -->
+        <div class="mmm_search">
+            <div class="clearfix">
+                <input class="search_input" type="text" placeholder="请输入你想比价的商品">
+                <input class="search_button" type="button" value="搜索">
+            </div>
+        </div>
+        <!-- 面包屑导航 -->
+        <div class="mmm_nav clearfix">
+            <div class="menu_nav">
+                <a href="index.html">首页</a>
+                >
+                <a href="category.html">全部分类</a>
+                >
+            </div>
+        </div>
+        <!-- 热门品牌排行 -->
+        <div class="rander">热门品牌排行</div>
+        <!-- 排行列表 -->
+        <div class="mmm_nav_list">
+            <div class="erp">
+                <ul class="first">
+                    <!-- 一级分类的坑 -->
+                </ul>
+            </div>
+        </div>
+        <!--底部 -->
+        <div class="mmm_footer">
+            <div class="footre_nav">
+                <ul class="clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                            <span>返回顶部</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <span class="mobile">手机App下载</span>
+                <span> 慢慢买手机版 -- 掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+    <!-- 一级分类模板渲染 -->
+    <script type="text/html" id="randerTmp">
+        {{each result v i}}
+            <li class="top">
+                <a href="brandlist.html?brandtitleid={{v.brandTitleId}}"  class="bac-pic">{{v.brandTitle}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/brandTitle.js"></script>
+</body>
+<!-- <img src="{{./images/ic_search.png}}" alt=""> -->
+<!-- <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg"
+                            alt=""> -->
+
+</html>

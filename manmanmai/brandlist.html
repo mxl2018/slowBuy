@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/brandlist.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目 -->
+    <div class="container">
+        <!-- 慢慢买头部 -->
+        <div class="mmm_header">
+            <div class="mmm_logo">
+                <a href="index.html">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="mmm_app">
+                <a href="javascript:;">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 慢慢买搜索 -->
+        <div class="mmm_search">
+            <div class="clearfix">
+                <input class="search_input" type="text" placeholder="请输入你想比价的商品">
+                <input class="search_button" type="button" value="搜索">
+            </div>
+        </div>
+        <!-- 面包屑导航 -->
+        <div class="mmm_nav clearfix">
+            <div class="menu_nav">
+                <a href="index.html">首页</a>
+                >
+                <a href="category.html">全部分类</a>
+                >
+            </div>
+        </div>
+        <!-- 热门品牌比较 -->
+        <div class="iphone">平板电视哪个牌子好</div>
+        <!-- 热门品牌比较列表 -->
+        <div class="render-box">
+            <ul class="render">
+                <!-- 热门品牌排行的坑 -->
+
+            </ul>
+        </div>
+        <!-- 热门品牌销量 -->
+        <div class="sales">平板电视产品销量排行</div>
+        <!-- 热门品牌销量列表 -->
+        <div class="mmm_product">
+            <ul class="sale-list">
+                <!-- 挖个产品坑 -->
+            </ul>
+        </div>
+        <!-- 平板电视最新评论 -->
+        <div class="comment">平板电视最新评论</div>
+        <!-- 平板电视最新评论列表 -->
+        <div class="comment-list">
+            <ul class="list">
+               <!-- 评论列表挖个坑 -->
+            </ul>
+        </div>
+        <!--底部 -->
+        <div class="mmm_footer">
+            <div class="footre_nav">
+                <ul class="clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                            <span>返回顶部</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <span class="mobile">手机App下载</span>
+                <span> 慢慢买手机版 -- 掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 评论列表模板渲染 -->
+    <script type = "text/html" id="commentTmp">
+        {{each result v i }}
+            <li>
+                <a href="bijia.aspx?id=211698">
+                    <div class="comment_top">
+                        <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+                        <span>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</span>
+                    </div>
+                    <div class="comment_bottom">
+                        <div class="user_time  clearfix">
+                            <div class="comment_user"><span class="user">{{v.comName}}：</span><span class="star">★★★★★</span></div>
+                            <div class="comment_time">{{v.comTime}}</div>
+                        </div>
+                       <div class="user_text">
+                            {{v.comContent}} <span>{{v.comFrom}}</span>
+                       </div>
+                    </div>
+                </a>
+            </li>
+        {{/each }}
+    </script>
+    <!--   热门品牌销量列表模板引擎 -->
+    <script type="text/html" id="scaleTmp">
+        {{each result v i}}
+            <li>
+                <a href="productlist_detailed.html?productId={{v.productId}}" class="clearfix">
+                    <div class="product-pic">
+                        {{@v.productImg}}
+                    </div>
+                    <div class="product_des">
+                        <div class="product_des_title">
+                            <span>{{v.productName}}</span>
+                        </div>
+                        <div class="product_des_content clearfix">
+                            <span class="price">{{v.productPrice}}</span>
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="num">
+                             <span>{{v.productQuote}}</span>
+                             <span>{{v.productCom}}</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <!-- 热门品牌比较列表模板渲染 -->
+    <script type="text/html" id="renderTmp">
+        {{each result v i}}
+            <li>
+                <a href="productlist.html?categoryid={{v.categoryId}}&pageid=1">
+                    <i>{{i+1}}</i>
+                    <div class="inner">
+                        <p>{{v.brandName}}</p>
+                        <p>{{v.brandInfo}}</p>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/brandlist.js"></script>
+</body>
+
+</html>

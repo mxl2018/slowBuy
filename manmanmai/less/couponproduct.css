@@ -1,0 +1,101 @@
+.mmm_header {
+  height: 0.44rem;
+  line-height: 0.44rem;
+  background-color: #F4483E;
+  color: white;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  text-align: center;
+}
+.mmm_header a {
+  width: 0.5rem;
+  height: 0.44rem;
+  position: absolute;
+  top: 0;
+}
+.mmm_header h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 0.44rem;
+  font-size: 0.2rem;
+}
+.mmm_header a.mmm_back {
+  left: 0;
+  color: white;
+}
+.mmm_header a.mmm_app {
+  right: 0;
+}
+.tip {
+  text-align: center;
+  color: #ccc;
+}
+.product_list {
+  position: relative;
+}
+.product_list .modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+.product_list .modal img {
+  width: 2rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.product_list .modal .arrow-left,
+.product_list .modal .arrow-right {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  line-height: 50px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.product_list .modal .arrow-left {
+  left: 0.6rem;
+}
+.product_list .modal .arrow-right {
+  right: 0.6rem;
+}
+.product_list li {
+  width: 100%;
+  height: 1.2rem;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1rem 0.05rem;
+  position: relative;
+}
+.product_list .img {
+  width: 1rem;
+  height: 0.8rem;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.05rem;
+}
+.product_list .time-info {
+  padding-left: 1.05rem;
+  padding-right: 0.3rem;
+}
+.product_list .time-info .price {
+  margin-bottom: 0.4rem;
+}
+.product_list .time-info .time {
+  color: red;
+}
+.product_list .icon {
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  transform: translateY(-50%);
+}

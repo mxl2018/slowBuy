@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/common.css">
+    <link rel="stylesheet" href="./less/coupon.css">
+    <title>Document</title>
+</head>
+<script src="./js/adaptor.js"></script>
+
+<body>
+    <!-- 慢慢买项目优惠券 -->
+    <div class="container">
+        <div class="row">
+            <!-- 慢慢买头部 -->
+            <div class="mmm_header">
+                <a href="index.html" class="mmm_back">
+                    <img src="" alt="">&lt;
+                </a>
+                <h3>优惠券</h3>
+                <a href="javascript:;" class="mmm_app">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+            <!-- 慢慢买主体内容 -->
+            <div class="couMain">
+                <ul class="clearfix pics">
+                  <!-- 挖个优惠图片坑 -->
+                </ul>
+            </div>
+            <!--底部 -->
+            <div class="mmm_footer">
+                <div class="footre_nav">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="javascript:;">登录</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">注册</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img" src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                                <span>返回顶部</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_content">
+                    <span class="mobile">手机App下载</span>
+                    <span> 慢慢买手机版 -- 掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 优惠券的模板引擎 -->
+    <script type="text/html" id="picTmp">
+        {{each result v i}} 
+        <li><a href="couponproduct.html?couponid={{v.couponId}}"><img src="{{v.couponImg}}" alt=""><p>{{v.couponTitle}}</p></a></li>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
+    <script src="./js/coupon.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,153 @@
+//白菜价头部
+.mmm_header{
+    height:0.44rem;
+    line-height: 0.44rem;
+    background-color: #F4483E;
+    color:white;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    position: relative;
+    text-align: center;
+    a{
+        width:0.5rem;
+        height:0.44rem;
+        position: absolute;
+        top:0;
+    }
+    h3{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 0.44rem;
+        font-size: 0.2rem;
+    }
+    a.mmm_back{
+        left:0;
+        color:white;
+    }
+    a.mmm_app{
+        right:0;
+    }
+
+}
+.row{
+    background-color: #F7F7F7;
+}
+// 导航栏tab栏切换标题
+.tab_nav{
+    width:100%;
+    height:0.38rem;
+    line-height: 0.38rem;
+    padding-right:0.38rem;
+    position: relative;
+    margin-bottom: 0.3rem;
+    margin-bottom: 0.02rem;
+    .list_nav{
+        width:100%;
+        height:0.38rem;
+        background-color: white;
+        overflow: hidden;
+        >ul{
+            height:0.38rem;
+            // width:10rem;
+            li{
+            float:left;
+            }
+            a{
+                display:block;
+                width:0.55rem;
+                height:0.4rem;
+                line-height: 0.4rem;
+                text-align: center;
+            }
+            a.current{
+                border-bottom:0.03rem solid red;
+                color:red;
+            }
+        }
+    }
+    .search{
+        width:0.38rem;
+        height:0.38rem;
+        background-color: gray;
+        position: absolute;
+        top:0;
+        right:0;
+    }
+}
+// tab切换内容
+.nav-content{
+    width:100%;
+    li{
+        padding:0.1rem 0.1rem;
+        position: relative;
+        background-color: #fff;
+        margin-bottom:0.05rem;
+        position: relative;
+        a.gobuy{
+           position: absolute;
+           width:100%;
+           height:100%;
+           top:0;
+           left:0;
+        }
+        img{
+            width:0.8rem;
+            height:0.8rem;
+            // border:1px solid #ccc;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .right{
+            width:100%;
+           display:inline-block;
+           padding-left:0.8rem;
+           .numTitle{
+            height:0.15rem;
+           }
+           .price{
+               color:red;
+               em{
+                   font-size: 0.14rem;
+               }
+           }
+           .oldPrice{
+               color:gray;
+               text-decoration: line-through;
+               margin-left:0.05rem;
+           }
+           .process-box{
+                color:red;
+                display:block;
+                margin-top: 0.05rem;
+                margin-bottom:0.05rem;
+                .process{
+                    margin-right:0.05rem;
+                }
+           }
+           .cheap {
+               width:100%;
+               .moneyPage{
+                   float:left;
+                   color:red;
+                   border:1px dashed red;
+                   width:0.8rem;
+                   height:0.15rem;
+                   line-height: 0.15rem;
+                   text-align: center;
+               }
+               .link{
+                   float:right;
+                   color:#fff;
+                   background-color: red;
+                   border-radius:0.03rem;
+                   width:0.6rem;
+                   height:0.15rem;
+                   line-height: 0.15rem;
+                   text-align: center;
+               }
+           }
+
+        }
+    }
+}
